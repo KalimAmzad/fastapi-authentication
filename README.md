@@ -14,7 +14,7 @@ cd authentication_app
 
 
 2. Create a virtual environment (optional but recommended:
-```
+```python
 python -m venv venv
 source venv/bin/activate
 ```
@@ -22,7 +22,7 @@ source venv/bin/activate
 
 3. Install the required dependencies:
 
-```
+```python
 pip install -r requirements.txt
 ```
 
@@ -35,8 +35,9 @@ You can configure the choice of backend database in the `authentication/config.p
 
 1. Run the application:
 
+```
 uvicorn my_authentication_app.main:app --reload
-
+```
 
 2. Access the Swagger documentation at http://localhost:8000/docs to interact with the API endpoints.
 
@@ -44,7 +45,7 @@ uvicorn my_authentication_app.main:app --reload
 
 ## Integrate with any applications
 
-```
+```python
 from authentication_app.authentication.auth import Auth
 
 from fastapi import Depends, FastAPI
