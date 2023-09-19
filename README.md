@@ -2,6 +2,28 @@
 
 This is a flexible authentication app that allows you to choose between MongoDB and PostgreSQL as the backend database.
 
+## File Structure
+
+```
+authentication_app/
+│
+├── authentication_app/
+│   ├── __init__.py
+│   ├── authentication/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   ├── auth.py
+│   │   ├── db_models.py
+│   │   ├── postgresql_models.py
+│   │   ├── mongodb_models.py
+│   │   └── database.py
+│   └── ...
+│
+├── setup.py  # Package setup script
+├── README.md
+├── requirements.txt  # Dependencies
+```
+
 ## Installation
 
 1. Clone this repository:
@@ -36,7 +58,7 @@ You can configure the choice of backend database in the `authentication/config.p
 1. Run the application:
 
 ```
-uvicorn my_authentication_app.main:app --reload
+uvicorn authentication_app.main:app --reload
 ```
 
 2. Access the Swagger documentation at http://localhost:8000/docs to interact with the API endpoints.
