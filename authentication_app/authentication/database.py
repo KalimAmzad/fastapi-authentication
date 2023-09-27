@@ -1,11 +1,12 @@
 # my_authentication_app/authentication/database.py
+# import certifi
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from pymongo import MongoClient
 from pymongo.collection import Collection
 from pymongo.database import Database
-from pydantic import BaseSettings
-import config
+from .config import AuthConfig
+
 class Database:
     def __init__(self, config: AuthConfig):
         self.config = config
@@ -22,5 +23,5 @@ class Database:
         else:
             raise ValueError("Invalid database type. Please choose 'postgresql' or 'mongodb'.")
 
-# config = AuthConfig()
-db = Database(config)
+conf = AuthConfig()
+db = Database(conf)
