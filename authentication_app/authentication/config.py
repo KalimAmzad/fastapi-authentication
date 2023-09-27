@@ -12,8 +12,8 @@ class AuthConfig(BaseSettings):
     postgresql_uri: str = "postgresql+psycopg2://postgres:admin1234@localhost/auth"
 
     # MongoDB configuration
-    mongodb_uri: str = "mongodb+srv://root:HumanityRules1234567890@cluster0.4m8b8.mongodb.net/imageapp?retryWrites=true&w=majority"
-    mongodb_db_name: str = "authentication"
+    mongodb_uri: str = "mongodb+srv://username:password@cluster.4m8b8.mongodb.net/"
+    mongodb_db_name: str = "database"
 
     RAISE_EXPIRED_ERROR: bool =  True
 
