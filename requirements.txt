@@ -2,7 +2,10 @@ fastapi==0.103.1
 uvicorn==0.23.2
 passlib[bcrypt]==1.7.4
 pydantic==2.3.0
-jose[cryptography]==1.0.0
-asyncpg==0.24.0  # PostgreSQL driver (optional)
 pymongo==3.12.1  # MongoDB driver (optional)
 python-multipart==0.0.5
+SQLAlchemy
+pydantic_settings
+pymongo[srv]
+psycopg2-binary
+PyJWT==2.8.0
